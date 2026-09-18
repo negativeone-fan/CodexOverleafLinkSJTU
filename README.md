@@ -1,7 +1,8 @@
 <div align="center">
   <img src="extension/assets/icons/codex-overleaf-icon.png" width="96" alt="Codex Overleaf Link">
-  <h1>Codex Overleaf Link</h1>
+  <h1>Codex Overleaf Link SJTU</h1>
   <p><strong>让 Codex 融入 Overleaf。</strong></p>
+  <p><strong>添加对[中文 Overleaf](https://cn.overleaf.com/project/) 与 [SJTU Overleaf](https://latex.sjtu.edu.cn/project) 的支持。</strong></p>
   <p>
     <img src="https://img.shields.io/badge/version-2.4.0-blue" alt="版本">
     <img src="https://img.shields.io/badge/platform-macOS%20%2F%20Windows%20%2F%20Linux-lightgrey" alt="支持平台">
@@ -75,7 +76,7 @@ Chrome 可能要求手动执行 **Load unpacked（加载已解压的扩展程序
 先阅读官方 README 和安装脚本，识别操作系统，检查 Node.js >= 20、Codex CLI 以及所选安装方式需要的其他前提。
 除非已指定版本，否则选择 GitHub 上最新已发布的稳定版，排除草稿和预发布版本。按文档使用托管安装，安装版本一致的 Extension 和 Native Host，不要用尚未发布的 main 源码代替稳定版。
 已有 Chrome 配置文件和托管安装时优先复用，保留项目文件、会话历史、设置及 Provider 凭据。不要输出密钥，也不要未经同意移除已有安装。
-完成终端侧的安装和检查。若 Chrome 要求手动加载已解压扩展或重新加载，给出准确的托管扩展目录和剩余步骤，不要绕过浏览器限制。
+完成终端侧的安装和检查。若 Chrome 要求手动加载已解压的扩展或重新加载，给出准确的托管扩展目录和剩余步骤，不要绕过浏览器限制。
 最后报告所选发布版本、已安装的 Extension 和 Native Host 版本、可观测到的浏览器实际加载版本，以及 Native 连接检查结果。磁盘版本一致不能证明 Chrome 已加载更新；需要人工完成的操作应明确列出。
 ```
 
@@ -260,7 +261,7 @@ node "$env:LOCALAPPDATA\CodexOverleaf\source\scripts\uninstall-native-host.mjs"
 
 `uninstall-managed` 会删除已注册的 Native Messaging 宿主、桥接启动程序、托管扩展和版本化 Native 运行时。`uninstall-native` 会删除 Native-only 注册和运行时副本。两者都不会清除浏览器会话历史 / 设置、项目镜像、插件 Codex 历史、模型服务凭据或已存储技能。
 
-还需要在 `chrome://extensions` 中移除扩展条目。若需要删除已保存的 Codex Overleaf 历史，应在移除扩展之前使用面板中的历史清理功能。Windows 的 Native 安装位于 `%LOCALAPPDATA%\CodexOverleaf`，项目镜像、插件 Codex 历史、服务配置和技能位于 `%USERPROFILE%\.codex-overleaf`；彻底清理文件系统数据需要处理两个目录。详见[本地数据与清理](#本地数据与清理)。
+还需要在 `chrome://extensions` 中移除扩展条目。若需要删除已保存的 Codex Overleaf 历史，应在移除扩展之前使用面板中的历史清理功能。Windows 的 Native 安装位于 `%LOCALAPPDATA%\CodexOverleaf`，项目镜像、插件、Codex 历史、服务配置和技能位于 `%USERPROFILE%\.codex-overleaf`；彻底清理文件系统数据需要处理两个目录。详见[本地数据与清理](#本地数据与清理)。
 
 </details>
 
