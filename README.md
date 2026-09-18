@@ -1,8 +1,20 @@
 <div align="center">
   <img src="extension/assets/icons/codex-overleaf-icon.png" width="96" alt="Codex Overleaf Link">
+
   <h1>Codex Overleaf Link SJTU</h1>
+
   <p><strong>让 Codex 融入 Overleaf。</strong></p>
-  <p><strong>添加对[中文 Overleaf](https://cn.overleaf.com/project/) 与 [SJTU Overleaf](https://latex.sjtu.edu.cn/project) 的支持。</strong></p>
+
+  <p>
+    <strong>
+      添加对
+      <a href="https://cn.overleaf.com/project/">中文 Overleaf</a>
+      与
+      <a href="https://latex.sjtu.edu.cn/project">SJTU Overleaf</a>
+      的支持。
+    </strong>
+  </p>
+
   <p>
     <img src="https://img.shields.io/badge/version-2.4.0-blue" alt="版本">
     <img src="https://img.shields.io/badge/platform-macOS%20%2F%20Windows%20%2F%20Linux-lightgrey" alt="支持平台">
