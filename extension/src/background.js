@@ -36,8 +36,12 @@ if (!globalThis.CodexOverleafUpdateRuntimeIdentity) {
     'https://www.overleaf.com/project',
     'https://overleaf.com/project',
     'https://www.overleaf.com/project/*',
-    'https://overleaf.com/project/*'
-  ];
+    'https://overleaf.com/project/*',
+  'https://cn.overleaf.com/project',
+  'https://latex.sjtu.edu.cn/project',
+  'https://cn.overleaf.com/project/*',
+  'https://latex.sjtu.edu.cn/project/*'
+];
   const COMPATIBILITY_REQUIRED_METHODS = new Set([
     'codex.run',
     'codex.steer',
@@ -382,7 +386,7 @@ if (!globalThis.CodexOverleafUpdateRuntimeIdentity) {
     try {
       const url = new URL(tab?.url || '');
       return url.protocol === 'https:' &&
-        (url.hostname === 'www.overleaf.com' || url.hostname === 'overleaf.com') &&
+        ['overleaf.com', 'www.overleaf.com', 'cn.overleaf.com', 'latex.sjtu.edu.cn'].includes(url.hostname) &&
         /^\/project\/[^/]+(?:\/|$)/.test(url.pathname);
     } catch (_error) {
       return false;
@@ -852,9 +856,7 @@ if (!globalThis.CodexOverleafUpdateRuntimeIdentity) {
     const senderUrl = sender.tab?.url || '';
     try {
       const url = new URL(senderUrl);
-      return url.protocol === 'https:' && (
-        url.hostname === 'www.overleaf.com' || url.hostname === 'overleaf.com'
-      );
+      return url.protocol === 'https:' && ['overleaf.com', 'www.overleaf.com', 'cn.overleaf.com', 'latex.sjtu.edu.cn'].includes(url.hostname);
     } catch (_error) {
       return false;
     }

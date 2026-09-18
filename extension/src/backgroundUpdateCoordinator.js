@@ -25,8 +25,12 @@
     'https://www.overleaf.com/project',
     'https://overleaf.com/project',
     'https://www.overleaf.com/project/*',
-    'https://overleaf.com/project/*'
-  ];
+    'https://overleaf.com/project/*',
+  'https://cn.overleaf.com/project',
+  'https://latex.sjtu.edu.cn/project',
+  'https://cn.overleaf.com/project/*',
+  'https://latex.sjtu.edu.cn/project/*'
+];
   const MESSAGE_TYPES = new Set([
     'codex-overleaf/consent-update-get-state',
     'codex-overleaf/consent-update-check',
@@ -486,7 +490,7 @@
     try {
       const url = new URL(tab.url || '');
       return url.protocol === 'https:' &&
-        (url.hostname === 'www.overleaf.com' || url.hostname === 'overleaf.com') &&
+        ['overleaf.com', 'www.overleaf.com', 'cn.overleaf.com', 'latex.sjtu.edu.cn'].includes(url.hostname) &&
         /^\/project\/[^/]+(?:\/|$)/.test(url.pathname);
     } catch (_error) {
       return false;
@@ -853,7 +857,7 @@
         return url.pathname === '/bootstrap/popup.html';
       }
       return url.protocol === 'https:' &&
-        (url.hostname === 'www.overleaf.com' || url.hostname === 'overleaf.com') &&
+        ['overleaf.com', 'www.overleaf.com', 'cn.overleaf.com', 'latex.sjtu.edu.cn'].includes(url.hostname) &&
         (url.pathname === '/project' || url.pathname.startsWith('/project/'));
     } catch (_error) {
       return false;

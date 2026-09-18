@@ -375,7 +375,7 @@
     if (!isValidProjectId(projectId)) {
       return;
     }
-    window.location.assign('https://www.overleaf.com/project/' + encodeURIComponent(projectId));
+    window.location.assign(window.location.origin + '/project/' + encodeURIComponent(projectId));
   }
 
   function renderRecentProjectRow(row) {

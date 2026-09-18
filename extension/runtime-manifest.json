@@ -4,7 +4,11 @@
     "https://www.overleaf.com/project",
     "https://overleaf.com/project",
     "https://www.overleaf.com/project/*",
-    "https://overleaf.com/project/*"
+    "https://overleaf.com/project/*",
+    "https://cn.overleaf.com/project",
+    "https://cn.overleaf.com/project/*",
+    "https://latex.sjtu.edu.cn/project",
+    "https://latex.sjtu.edu.cn/project/*"
   ],
   "js": [
     "src/content/generated/content.bundle.js"
