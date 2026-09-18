@@ -1,7 +1,6 @@
 <div align="center">
   <img src="extension/assets/icons/codex-overleaf-icon.png" width="96" alt="Codex Overleaf Link">
   <h1>Codex Overleaf Link</h1>
-  <p><a href="README.md" lang="en">English</a> | <strong>简体中文</strong></p>
   <p><strong>让 Codex 融入 Overleaf。</strong></p>
   <p>
     <img src="https://img.shields.io/badge/version-2.4.0-blue" alt="版本">
